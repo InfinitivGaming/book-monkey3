@@ -4,7 +4,9 @@
     <bm-book-list-item class="item"
       *ngFor="let b of books"
       [book]="b"
-      [routerLink]="b.isbn"></bm-book-list-item>
+      [routerLink]="b.isbn"
+      id="bookItem{{b.isbn}}"
+    ></bm-book-list-item>
     
     <p *ngIf="!books.length"
       i18n="@@BookListComponent:no book">
@@ -22,4 +24,3 @@
   </ng-template>
 
 </div>
-    
